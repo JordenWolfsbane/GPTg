@@ -1,0 +1,6 @@
+langchain
+huggingface_hub
+openai
+uvicorn
+fastapi
+scikit-learn
