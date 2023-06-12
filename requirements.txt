@@ -4,3 +4,4 @@ openai
 uvicorn
 fastapi
 scikit-learn
+psycopg2-binary
