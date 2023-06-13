@@ -1,4 +1,4 @@
-from src.db.db_setup import ChatDatabase
+from db.chat_db import ChatDatabase
 import psycopg2
 import pytest
 

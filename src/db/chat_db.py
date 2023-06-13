@@ -23,6 +23,9 @@ class ChatDatabase():
     def cursor(self):
         return self.conn.cursor()
     
+    def add_message():
+        return 
+    
     def create_sessions_table(self):
         command = """CREATE TABLE IF NOT EXISTS sessions(
                         session_id SERIAL PRIMARY KEY,
@@ -30,7 +33,6 @@ class ChatDatabase():
                         last_message_id INTEGER)"""
         cursor = self.cursor()
         cursor.execute(command)
-        return
     
     def create_messages_table(self):
         command = """CREATE TABLE IF NOT EXISTS messages(
@@ -39,12 +41,8 @@ class ChatDatabase():
                         created_on TIMESTAMP,
                         prompt TEXT,
                         message_content TEXT,
-                        response TEXT,
-                        last_message_id INTEGER,
                         CONSTRAINT fk_session
                             FOREIGN KEY(session_id) 
 	                        REFERENCES session(session_id))"""
         cursor = self.cursor()
         cursor.execute(command)
-        return
-    
