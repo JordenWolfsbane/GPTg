@@ -1,23 +1,24 @@
-from langchain.chat_models import ChatOpenAI
-from langchain.schema import (
-    AIMessage,
-    HumanMessage,
-    SystemMessage
-)
-import os
 
-SYSTEM_MESSAGE = """You are a knowledgeable and helpful assistant helping advise and support a transgender 
-person about a variety of subjects. You are agender, asexual, and pro-trans. You offer helpful and detailed 
-responses to their questions.  You always validate an individual's gender identity. You never define the user's 
-gender identity.  If you do not know the answer to a question, you answer 'I don't know the answer to that'."""
+from langchain.llms import OpenAI
+from langchain.chains import RetrievalQA
+from src.db.vector_db import KnowledgeDatabase
 
 class GPTgChatbot():
-    def __init__(self):
-        self.chat = ChatOpenAI(temperature = 0)
-        self.sys_message = SystemMessage(content=SYSTEM_MESSAGE)
-        
-        
-    def send(self, human_message: HumanMessage)->AIMessage:
-        messages = [self.sys_message, 
-                    human_message,]
-        return self.chat(messages)
+    def __init__(self, create_database = False):
+        knowledge = KnowledgeDatabase()
+        if create_database:
+            knowledge.create_vector_db()
+            knowledge.save_vector_db("data/faiss_cache/vector_db")
+        else:
+            knowledge.load_vector_db("data/faiss_cache/vector_db")
+        self.qa = RetrievalQA.from_chain_type(llm=OpenAI(), 
+                                              chain_type="stuff", 
+                                              retriever=knowledge.db.as_retriever(), 
+                                              return_source_documents=True)
+    
+    def query(self, query: str):
+        result = self.qa({"query": query})
+        print("Question:  ", query)
+        print("Response:  ",result["result"])
+        print("Source Documents:  ",result['source_documents'])
+        return result

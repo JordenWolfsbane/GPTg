@@ -5,3 +5,7 @@ uvicorn
 fastapi
 scikit-learn
 psycopg2-binary
+unstructured
+pdf2image
+faiss-cpu
+tiktoken

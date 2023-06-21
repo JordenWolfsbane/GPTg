@@ -1,0 +1,57 @@
+{
+    "sources":[
+        {"description": "UCSF transgender care guidelines",
+        "urls": [
+        "https://transcare.ucsf.edu/guidelines/introduction",
+        "https://transcare.ucsf.edu/guidelines/grading",
+        "https://transcare.ucsf.edu/guidelines/terminology",
+        "https://transcare.ucsf.edu/guidelines/clinic-environment",
+        "https://transcare.ucsf.edu/guidelines/physical-examination",
+        "https://transcare.ucsf.edu/guidelines/overview",
+        "https://transcare.ucsf.edu/guidelines/initiating-hormone-therapy",
+        "https://transcare.ucsf.edu/guidelines/feminizing-hormone-therapy",
+        "https://transcare.ucsf.edu/guidelines/masculinizing-therapy",
+        "https://transcare.ucsf.edu/guidelines/pain-transmen",
+        "https://transcare.ucsf.edu/guidelines/gender-nonconforming",
+        "https://transcare.ucsf.edu/guidelines/cardiovascular",
+        "https://transcare.ucsf.edu/guidelines/diabetes",
+        "https://transcare.ucsf.edu/guidelines/bone-health-and-osteoporosis",
+        "https://transcare.ucsf.edu/guidelines/hiv",
+        "https://transcare.ucsf.edu/guidelines/hepatitis-c",
+        "https://transcare.ucsf.edu/guidelines/stis",
+        "https://transcare.ucsf.edu/guidelines/testicular-pain",
+        "https://transcare.ucsf.edu/guidelines/silicone-filler",
+        "https://transcare.ucsf.edu/guidelines/fertility",
+        "https://transcare.ucsf.edu/guidelines/cancer-screening",
+        "https://transcare.ucsf.edu/guidelines/breast-cancer-women",
+        "https://transcare.ucsf.edu/guidelines/prostate-testicular-cancer",
+        "https://transcare.ucsf.edu/guidelines/breast-cancer-men",
+        "https://transcare.ucsf.edu/guidelines/cervical-cancer",
+        "https://transcare.ucsf.edu/guidelines/ovarian-cancer",
+        "https://transcare.ucsf.edu/guidelines/mental-health",
+        "https://transcare.ucsf.edu/guidelines/chest-surgery-masculinizing",
+        "https://transcare.ucsf.edu/guidelines/chest-surgery-feminizing",
+        "https://transcare.ucsf.edu/guidelines/vaginoplasty",
+        "https://transcare.ucsf.edu/guidelines/phalloplasty",
+        "https://transcare.ucsf.edu/guidelines/hysterectomy",
+        "https://transcare.ucsf.edu/guidelines/binding-packing-and-tucking",
+        "https://transcare.ucsf.edu/guidelines/hair-removal",
+        "https://transcare.ucsf.edu/guidelines/vocal-health",
+        "https://transcare.ucsf.edu/guidelines/insurance",
+        "https://transcare.ucsf.edu/guidelines/legal",
+        "https://transcare.ucsf.edu/guidelines/segregated-systems",
+        "https://transcare.ucsf.edu/guidelines/homeless",
+        "https://www.wpath.org/soc8"
+        ]
+    },
+    {   "description": "diy hrt directory",
+        "urls":[
+            "https://diyhrt.wiki/index",
+            "https://diyhrt.wiki/transfem",
+            "https://diyhrt.wiki/transmasc",
+            "https://diyhrt.wiki/bloodtests",
+            "https://diyhrt.wiki/injectionsupplies",
+            "https://diyhrt.wiki/apps"
+        ]}
+    ]
+}
