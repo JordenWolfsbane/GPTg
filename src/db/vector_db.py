@@ -45,7 +45,7 @@ class KnowledgeDatabase():
         
         
     def load_vector_db(self,file_path : str):
-        self.db = FAISS.load_local(file_path)
+        self.db = FAISS.load_local(file_path, embeddings=OpenAIEmbeddings())
         
     def save_vector_db(self,file_path : str):
         self.db.save_local(file_path)
