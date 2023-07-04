@@ -3,6 +3,10 @@
 
 An LLM-powered chatbot aiming to provide useful and accurate information to transgender individuals about gender, transitioning, psychological coping, geographical political realities, and gender affirming care.  
 
+## Current Architecture
+
+Uses Langchain and FAISS to set up the knowledge database and a question answering chatbot.  Information sources are automatically scraped from the internet and a collection of documents and loaded into the vector database for retrieval. The chatbot is made available via FastAPI within a docker container.
+
 # Project Roadmap
 
 ## Components
