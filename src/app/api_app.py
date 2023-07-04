@@ -69,4 +69,4 @@ async def ask_question(query: Query):
     return {"Response": response}
 
 if __name__ == "__main__":
-    uvicorn.run("src/app/api_app:gptg_app")
+    uvicorn.run("src.app.api_app:gptg_app")

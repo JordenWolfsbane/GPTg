@@ -1,5 +1,9 @@
 version: '3.8'
 services:
+  gptg_api:
+    build: .
+    ports:
+      - 8000:8000
   db:
     image: postgres:15-alpine
     restart: always
