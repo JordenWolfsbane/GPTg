@@ -5,7 +5,10 @@ from langchain.document_loaders import DirectoryLoader, UnstructuredURLLoader
 import json
 
 class KnowledgeDatabase():
-    
+    def __init__(self):
+        self.tokens_per_chunk = 200
+        self.chunk_overlap = 25
+        
     def create_vector_db(self):
         file_documents = self.load_files()
         file_db = self.create_vectorstore(file_documents)
@@ -38,11 +41,11 @@ class KnowledgeDatabase():
         return documents
     
     def create_vectorstore(self,documents):
-        text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=200)
+        text_splitter = CharacterTextSplitter.from_tiktoken_encoder(chunk_size=self.tokens_per_chunk,
+                                                                    chunk_overlap=self.chunk_overlap)
         texts = text_splitter.split_documents(documents)
         embeddings = OpenAIEmbeddings()
         return FAISS.from_documents(texts, embeddings)
-        
         
     def load_vector_db(self,file_path : str):
         self.db = FAISS.load_local(file_path, embeddings=OpenAIEmbeddings())
