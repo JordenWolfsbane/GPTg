@@ -66,7 +66,7 @@ def start_new_session():
 @gptg_app.get("/chat", tags = "chat")
 async def ask_question(query: Query):
     response = await gptg.query(query.message)
-    return {"Response": response}
+    return {"Answer": response["result"], "Sources": response["source_documents"]}
 
 if __name__ == "__main__":
     uvicorn.run("src.app.api_app:gptg_app")
